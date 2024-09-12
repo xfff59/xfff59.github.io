@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+body {
+    background-color: #fefae0;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    /* Adjust background image for better mobile view */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Roboto' font-weight='400' font-size='20' fill='%23ccd5ae' transform='translate(-20, 20) rotate(-45 50 50)'>Mia</text></svg>");
+    background-size: 200px 200px; /* Make background larger for mobile */
+    background-repeat: repeat; /* Ensure pattern repeats correctly */
+}
+
+.container {
+    padding: 1rem; /* Add padding around the container for better spacing */
+    max-width: 100%; /* Limit container width on mobile */
+}
+
+img.img-thumbnail {
+    width: 100%; /* Ensure images take up full width */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+p {
+    text-align: justify; /* Aligns text to both left and right margins */
+    margin: 1rem 1.5rem; /* Provides a good amount of space around text for readability */
+    line-height: 1.6; /* Increases line height for better reading experience */
+}
+
+.btn {
+    width: 100%; /* Make buttons full width for easier touch access */
+    padding: 0.8rem; /* Increase padding for better touch area */
+    margin-top: 10px; /* Add top margin for spacing between buttons */
+    margin-bottom: 10px; /* Add bottom margin for spacing between buttons */
+    display: block; /* Ensures buttons are stacked vertically */
+}
+
+.btn-primary {
+    background-color: #d4a373;
+    border: none;
+    color: white; /* Ensure text is legible */
+}
+
+.btn-primary:hover {
+    background-color: #b58364; /* Adjust hover color for better contrast */
+}
+
+#previous-button-container {
+    position: fixed; /* Change to fixed to maintain position on scroll */
+    top: 10px;
+    right: 10px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.btn-group .btn {
+    width: auto; /* Override full width for inline display in groups */
+    margin-right: 5px; /* Add margin between buttons in the group */
+    display: inline-block; /* Buttons in a group display inline */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .container {
+        padding: 2rem; /* Increase padding for larger screens */
+    }
+
+    .btn {
+        padding: 0.5rem 1rem; /* Adjust padding */
+        margin: 0.5rem; /* Adjust margins to give space around buttons */
+    }
+
+    body {
+        background-size: 150px 150px; /* Adjust background size for larger displays */
+    }
+
+    #previous-button-container {
+        position: absolute; /* Switch back to absolute positioning on larger screens */
+    }
+}
